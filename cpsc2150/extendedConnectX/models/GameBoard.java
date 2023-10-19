@@ -1,7 +1,7 @@
 package cpsc2150.extendedConnectX.models;
 
 /*@authors Breanna Mackey BreannaMackey, Trent Brown Trentbrown1, Gabriel Hillesheim ghilles23
- * @version 1.0
+ * @version 1.0 
  * Constructs a GameBoard Object that is to be built upon through various methods.
  */
 
