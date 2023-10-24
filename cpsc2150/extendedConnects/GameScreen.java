@@ -15,9 +15,10 @@ public class GameScreen {
             
             Scanner input = new Scanner(System.in);
             char currentPlayer = 'X'; //set initial character/ player1 to X
-            boolean isPlayedAgain = true; 
+            String userInput = "y";
     
-            while(isPlayedAgain){
+            while(userInput != "n"){
+                
                
                 System.out.println(gameBoard); //print initial gameBoard
                 System.out.print("Player " + currentPlayer + ", what column do you want to place your marker in?\n");
@@ -30,6 +31,10 @@ public class GameScreen {
                         if(gameBoard.checkForWin(chosenCol)){
                             System.out.println(gameBoard);
                             System.out.println("Player " + currentPlayer + " Won!");
+                            System.out.println("Do you want to play again? y/n");
+                            Scanner playAgain = new Scanner(System.in);
+                            userInput = playAgain.nextLine();
+                            gameBoard = new GameBoard();
                             
                        }
                        
@@ -50,9 +55,9 @@ public class GameScreen {
                     System.out.println("Invalid column choice. Please choose a valid column.");
                 }
 
-                System.out.println("Do you want to play again? y/n");
-                isPlayedAgain = input.nextLine().equalsIgnoreCase("y");
+                
              }
+             
         }
                 
             
